@@ -3,12 +3,9 @@
 require 'rake'
 require 'rake/tasklib'
 require 'rbconfig'
+tools_path = File.dirname(File.expand_path(__FILE__ + '/..')) + '/tools'
+Dir[tools_path + '/*.rb'].each { |f| require f }
 require_relative '../quality_checker'
-require_relative '../tools/cane'
-require_relative '../tools/flay'
-require_relative '../tools/flog'
-require_relative '../tools/reek'
-require_relative '../tools/rubocop'
 
 module Quality
   #

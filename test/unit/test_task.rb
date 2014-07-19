@@ -1,8 +1,5 @@
-require_relative 'tools/cane'
-require_relative 'tools/flay'
-require_relative 'tools/flog'
-require_relative 'tools/reek'
-require_relative 'tools/rubocop'
+tools_path = File.dirname(File.expand_path(__FILE__)) + '/tools'
+Dir[tools_path + '/*.rb'].each { |f| require f }
 
 # Unit test the Task class
 class TestTask < Test::Unit::TestCase
@@ -32,7 +29,7 @@ class TestTask < Test::Unit::TestCase
   end
 
   def all_tools
-    %w(cane flog flay reek rubocop)
+    Quality::Rake::Task.new.send(:tools)
   end
 
   def expect_tools_run
