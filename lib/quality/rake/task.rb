@@ -9,6 +9,7 @@ require_relative '../tools/flay'
 require_relative '../tools/flog'
 require_relative '../tools/reek'
 require_relative '../tools/rubocop'
+require_relative '../tools/rails_best_practices'
 
 module Quality
   #
@@ -141,6 +142,7 @@ module Quality
 
       def run_quality_with_tool(tool)
         installed = @gem_spec.find_all_by_name(tool).any?
+        suppressed = @skip_tools.include? tool
 
         if installed && !suppressed
           method("quality_#{tool}".to_sym).call

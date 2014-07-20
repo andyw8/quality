@@ -1,0 +1,110 @@
+
+
+Source Codes: |==============================================================================================|
+[1;31m/Users/example/db/schema.rb:31 - always add db index (classifications => [topic_id])[0m
+[1;31m/Users/example/db/schema.rb:31 - always add db index (classifications => [classifiable_id, classifiable_type])[0m
+[1;31m/Users/example/db/schema.rb:79 - always add db index (downloads => [purchaseable_id, purchaseable_type])[0m
+[1;31m/Users/example/db/schema.rb:135 - always add db index (notes => [user_id])[0m
+[1;31m/Users/example/db/schema.rb:135 - always add db index (notes => [contributor_id])[0m
+[1;31m/Users/example/db/schema.rb:216 - always add db index (purchases => [coupon_id])[0m
+[1;31m/Users/example/db/schema.rb:216 - always add db index (purchases => [user_id])[0m
+[1;31m/Users/example/db/schema.rb:216 - always add db index (purchases => [purchaseable_id, purchaseable_type])[0m
+[1;31m/Users/example/db/schema.rb:313 - always add db index (teams => [team_plan_id])[0m
+[1;31m/Users/example/db/schema.rb:313 - always add db index (teams => [subscription_id])[0m
+[1;31m/Users/example/app/models/purchase_price_calculator.rb:20 - law of demeter[0m
+[1;31m/Users/example/app/helpers/purchases_helper.rb:57 - law of demeter[0m
+[1;31m/Users/example/app/views/episodes/show.html.erb:21 - law of demeter[0m
+[1;31m/Users/example/app/views/purchase_mailer/_receipt_individual_intro.text.erb:3 - law of demeter[0m
+[1;31m/Users/example/app/views/purchase_mailer/_receipt_subscription_intro.text.erb:3 - law of demeter[0m
+[1;31m/Users/example/app/views/purchase_mailer/_receipt_subscription_intro.text.erb:8 - law of demeter[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:7 - law of demeter[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:8 - law of demeter[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:12 - law of demeter[0m
+[1;31m/Users/example/app/controllers/purchases_controller.rb:12 - move model logic into model (@purchase use_count > 4)[0m
+[1;31m/Users/example/app/helpers/auth_callbacks_helper.rb:1 - remove empty helpers[0m
+[1;31m/Users/example/app/controllers/application_controller.rb:10 - remove unused methods (ApplicationController#must_be_admin)[0m
+[1;31m/Users/example/app/controllers/application_controller.rb:17 - remove unused methods (ApplicationController#must_be_team_member)[0m
+[1;31m/Users/example/app/controllers/purchases_controller.rb:103 - remove unused methods (PurchasesController#url_after_denied_access_when_signed_out)[0m
+[1;31m/Users/example/app/controllers/sessions_controller.rb:6 - remove unused methods (SessionsController#return_to)[0m
+[1;31m/Users/example/app/controllers/sessions_controller.rb:10 - remove unused methods (SessionsController#url_after_create)[0m
+[1;31m/Users/example/app/controllers/users_controller.rb:39 - remove unused methods (UsersController#return_to)[0m
+[1;31m/Users/example/app/helpers/application_helper.rb:7 - remove unused methods (ApplicationHelper#google_map_link_to)[0m
+[1;31m/Users/example/app/helpers/application_helper.rb:20 - remove unused methods (ApplicationHelper#link_to_remove_fields)[0m
+[1;31m/Users/example/app/helpers/application_helper.rb:24 - remove unused methods (ApplicationHelper#link_to_add_fields)[0m
+[1;31m/Users/example/app/helpers/application_helper.rb:32 - remove unused methods (ApplicationHelper#registration_url)[0m
+[1;31m/Users/example/app/helpers/application_helper.rb:44 - remove unused methods (ApplicationHelper#partial_name)[0m
+[1;31m/Users/example/app/helpers/teacher_helper.rb:2 - remove unused methods (TeacherHelper#teacher_label)[0m
+[1;31m/Users/example/app/helpers/team_plans_helper.rb:2 - remove unused methods (TeamPlansHelper#team_price_per_month)[0m
+[1;31m/Users/example/app/helpers/team_plans_helper.rb:6 - remove unused methods (TeamPlansHelper#team_plan_quantity_select)[0m
+[1;31m/Users/example/app/helpers/topics_helper.rb:2 - remove unused methods (TopicsHelper#format_content)[0m
+[1;31m/Users/example/app/helpers/topics_helper.rb:8 - remove unused methods (TopicsHelper#topic_classes)[0m
+[1;31m/Users/example/app/helpers/wistia_helper.rb:15 - remove unused methods (WistiaHelper#small_wistia_iframe_for)[0m
+[1;31m/Users/example/app/models/cancellation.rb:13 - remove unused methods (Cancellation#cancel_and_refund)[0m
+[1;31m/Users/example/app/models/features/generic.rb:10 - remove unused methods (Features::Generic#unfulfill)[0m
+[1;31m/Users/example/app/models/features/source_code.rb:13 - remove unused methods (Features::SourceCode#unfulfill)[0m
+[1;31m/Users/example/app/models/mentor.rb:25 - remove unused methods (Mentor#active_mentee_count)[0m
+[1;31m/Users/example/app/models/product.rb:56 - remove unused methods (Product#product_type_symbol)[0m
+[1;31m/Users/example/app/models/product.rb:92 - remove unused methods (Product#to_aside_partial)[0m
+[1;31m/Users/example/app/models/promoted_catalog.rb:10 - remove unused methods (PromotedCatalog#respond_to_missing?)[0m
+[1;31m/Users/example/app/models/purchase.rb:51 - remove unused methods (Purchase#total_sales_within_range)[0m
+[1;31m/Users/example/app/models/purchase.rb:55 - remove unused methods (Purchase#for_purchaseable)[0m
+[1;31m/Users/example/app/models/purchase.rb:79 - remove unused methods (Purchase#last_name)[0m
+[1;31m/Users/example/app/models/purchase.rb:180 - remove unused methods (Purchase#stripe_customer)[0m
+[1;31m/Users/example/app/models/subscription.rb:25 - remove unused methods (Subscription#canceled_in_last_30_days)[0m
+[1;31m/Users/example/app/models/subscription.rb:29 - remove unused methods (Subscription#active_as_of)[0m
+[1;31m/Users/example/app/models/subscription.rb:33 - remove unused methods (Subscription#created_before)[0m
+[1;31m/Users/example/app/models/subscription.rb:68 - remove unused methods (Subscription#team?)[0m
+[1;31m/Users/example/app/models/subscription.rb:82 - remove unused methods (Subscription#active)[0m
+[1;31m/Users/example/app/models/user.rb:21 - remove unused methods (User#with_active_subscription)[0m
+[1;31m/Users/example/app/models/user.rb:42 - remove unused methods (User#last_name)[0m
+[1;31m/Users/example/app/models/user.rb:114 - remove unused methods (User#password_optional?)[0m
+[1;31m/Users/example/app/models/workshop.rb:42 - remove unused methods (Workshop#questions_with_blank)[0m
+[1;31m/Users/example/app/models/workshop.rb:98 - remove unused methods (Workshop#to_aside_partial)[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:1 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:1 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:17 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:17 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:18 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:28 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:32 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:33 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:63 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/purchases/_form.html.erb:66 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/subscriber/purchases/_overlapping.html.erb:1 - replace instance variable with local variable[0m
+[1;31m/Users/example/app/views/subscriber/purchases/_subscriber_purchase_form.html.erb:1 - replace instance variable with local variable[0m
+[1;31m/Users/example/config/routes.rb:36 - restrict auto-generated routes session (only: [])[0m
+[1;31m/Users/example/config/routes.rb:152 - restrict auto-generated routes users (except: [:show, :destroy, :index])[0m
+[1;31m/Users/example/config/routes.rb:155 - restrict auto-generated routes users/password (only: [])[0m
+[1;31m/Users/example/config/routes.rb:159 - restrict auto-generated routes passwords (only: [])[0m
+[1;31m/Users/example/app/controllers/pages_controller.rb:5 - simplify render in controllers[0m
+[1;31m/Users/example/app/controllers/users_controller.rb:28 - simplify render in controllers[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:17 - simplify render in views[0m
+[1;31m/Users/example/app/mailers/purchase_mailer.rb:2 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/mailers/purchase_mailer.rb:13 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/mailers/subscription_mailer.rb:2 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/mailers/subscription_mailer.rb:15 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/mailers/subscription_mailer.rb:24 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/mailers/subscription_mailer.rb:34 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/mailers/subscription_mailer.rb:46 - use multipart/alternative as content_type of email[0m
+[1;31m/Users/example/app/models/coupon_factory.rb:9 - use query attribute (purchase.stripe_coupon_id?)[0m
+[1;31m/Users/example/app/models/payments/stripe_payment.rb:93 - use query attribute (@purchase.stripe_coupon_id?)[0m
+[1;31m/Users/example/app/models/purchase_price_calculator.rb:8 - use query attribute (purchase.variant?)[0m
+[1;31m/Users/example/app/services/purchase_info_copier.rb:17 - use query attribute (purchase.github_usernames?)[0m
+[1;31m/Users/example/app/services/purchase_info_copier.rb:17 - use query attribute (user.github_username?)[0m
+[1;31m/Users/example/app/services/purchase_info_copier.rb:23 - use query attribute (purchase.organization?)[0m
+[1;31m/Users/example/app/services/purchase_info_copier.rb:29 - use query attribute (purchase.address1?)[0m
+[1;31m/Users/example/app/services/purchase_prepopulater.rb:31 - use query attribute (user.github_username?)[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:33 - use query attribute (@purchase.organization?)[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:37 - use query attribute (@purchase.address2?)[0m
+[1;31m/Users/example/app/views/purchase_mailer/purchase_receipt.text.erb:40 - use query attribute (@purchase.city?)[0m
+[1;31m/Users/example/app/views/subscriptions/_subscription.html.erb:10 - use query attribute (subscription.scheduled_for_cancellation_on?)[0m
+[1;31m/Users/example/app/views/subscriptions/_subscription.html.erb:14 - use query attribute (subscription.scheduled_for_cancellation_on?)[0m
+[1;31m/Users/example/app/views/topics/show.html.erb:9 - use query attribute (@topic.summary?)[0m
+[1;31m/Users/example/app/controllers/subscriber/invoices_controller.rb:18 - use scope access[0m
+[1;31m/Users/example/config/initializers/backtrace_silencers.rb:5 - remove trailing whitespace[0m
+[1;31m/Users/example/app/views/purchases/_github_usernames.html.erb:5 - remove trailing whitespace[0m
+[1;31m/Users/example/app/views/subscription_mailer/subscription_receipt.text.erb:9 - remove trailing whitespace[0m
+[1;32m
+Please go to http://rails-bestpractices.com to see more useful Rails Best Practices.[0m
+[1;31m
+Found 103 warnings.[0m

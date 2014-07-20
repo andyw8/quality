@@ -20,7 +20,7 @@ CLOBBER.include("#{BUILD_DIR}/*")
 Dir['tasks/**/*.rake'].each { |t| load t }
 
 Quality::Rake::Task.new do |t|
-  t.skip_tools = ['reek']
+  t.skip_tools = ['reek', 'rails_best_practices']
 end
 
 task :clear_metrics do |_t|
